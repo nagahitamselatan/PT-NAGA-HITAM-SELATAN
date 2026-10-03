@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070707">
+<meta name="description" content="PT NAGA HITAM SELATAN — perdagangan, produk premium dan Golden Triangle Coffee.">
+<title>PT NAGA HITAM SELATAN | Golden Triangle Coffee</title>
+<style>
+:root{--bg:#060606;--panel:#101010;--gold:#d8a52f;--gold2:#f4d273;--white:#f7f4ed;--muted:#aaa59b;--line:rgba(216,165,47,.25);--max:1220px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:#fff;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.container{width:min(var(--max),92%);margin:auto}
+.gold{color:var(--gold2)}
+.eyebrow{text-transform:uppercase;letter-spacing:.25em;font-size:.76rem;font-weight:900;color:var(--gold2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 22px;border:1px solid var(--gold);border-radius:13px;font-weight:850;transition:.25s;cursor:pointer}
+.btn.primary{background:linear-gradient(135deg,#f4d16d,#b77e18);color:#111}
+.btn.secondary{background:rgba(0,0,0,.38);backdrop-filter:blur(10px)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(216,165,47,.18)}
+header{position:fixed;z-index:100;left:0;right:0;top:0;background:rgba(4,4,4,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand img{width:55px;height:55px;object-fit:contain}
+.brand strong{display:block;font-family:Georgia,serif;font-size:1rem;letter-spacing:.06em}
+.brand small{color:var(--gold2);letter-spacing:.2em;font-weight:800;font-size:.63rem}
+nav{display:flex;gap:25px;font-size:.84rem;font-weight:700}
+nav a{color:#ddd;position:relative}
+nav a:after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:2px;background:var(--gold);transition:.25s}
+nav a:hover{color:var(--gold2)} nav a:hover:after{right:0}
+.menu{display:none;background:none;border:0;color:#fff;font-size:30px}
+.hero{min-height:880px;padding-top:78px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(4,4,4,.98) 0%,rgba(4,4,4,.86) 38%,rgba(4,4,4,.32) 72%,rgba(4,4,4,.72)),url("assets/dragon-coffee-hero.jpg") center/cover no-repeat}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:220px;background:linear-gradient(transparent,var(--bg));pointer-events:none}
+.hero-inner{position:relative;z-index:2;padding:75px 0 110px;width:min(720px,100%)}
+.hero h1{font-family:Georgia,serif;font-size:clamp(3rem,6.7vw,6.4rem);line-height:.97;letter-spacing:-.05em;margin:16px 0 25px}
+.hero h1 em{font-style:normal;color:var(--gold2)}
+.hero p{font-size:1.1rem;color:#dedbd4;max-width:650px}
+.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:31px}
+.scroll{position:absolute;bottom:40px;right:4%;z-index:5;color:#c7c2b9;font-size:.75rem;letter-spacing:.2em;writing-mode:vertical-rl}
+.section{padding:100px 0;position:relative}
+.section.alt{background:#0b0b0b}
+.section.light{background:linear-gradient(135deg,#f4eee2,#fff);color:#17130d}
+.section h2{font-family:Georgia,serif;font-size:clamp(2.25rem,5vw,4.2rem);line-height:1.02;margin:10px 0 20px}
+.copy{color:#c6c2ba;font-size:1.02rem}.light .copy{color:#575047}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.logo-card{min-height:450px;border-radius:28px;border:1px solid var(--line);background:radial-gradient(circle,rgba(216,165,47,.15),transparent 42%),#090909;display:grid;place-items:center;overflow:hidden;position:relative}
+.logo-card:before,.logo-card:after{content:"";position:absolute;border:1px solid rgba(216,165,47,.18);border-radius:50%;width:390px;height:390px}.logo-card:after{width:470px;height:470px}
+.logo-card img{width:320px;max-width:72%;z-index:2;filter:drop-shadow(0 15px 28px rgba(216,165,47,.18))}
+.leaders{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.person{border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#151515,#0b0b0b);overflow:hidden;transition:.3s}
+.person:hover{transform:translateY(-5px);border-color:rgba(216,165,47,.6)}
+.person-photo{height:260px;background:#1b1b1b;overflow:hidden}
+.person-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.person-info{padding:18px}.person-info b{font-size:1.05rem;display:block}.person-info span{font-size:.78rem;color:var(--gold2);font-weight:700}
+.person-info p{font-size:.82rem;color:#aaa;margin-top:5px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:45px}
+.stat{padding:25px;border:1px solid var(--line);border-radius:18px;background:#101010}.stat b{display:block;font-family:Georgia,serif;color:var(--gold2);font-size:2rem}.stat span{color:#aaa;font-size:.86rem}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.feature{padding:25px;border:1px solid var(--line);border-radius:19px;background:#101010;transition:.3s}.feature:hover{transform:translateY(-5px);background:#151515}.feature .icon{font-size:2rem;color:var(--gold2);margin-bottom:12px}.feature h3{font-size:1rem}.feature p{font-size:.87rem;color:#aaa;margin-top:6px}
+.product{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}
+.product-art{min-height:480px;border-radius:28px;background:linear-gradient(135deg,rgba(0,0,0,.12),rgba(0,0,0,.35)),url("assets/dragon-coffee-hero.jpg") center/cover;position:relative;box-shadow:0 25px 60px rgba(0,0,0,.18)}
+.product-card{position:absolute;right:24px;bottom:24px;padding:20px 22px;border-radius:18px;background:rgba(8,8,8,.86);color:white;border:1px solid var(--gold);backdrop-filter:blur(10px)}.product-card strong{font-family:Georgia,serif;font-size:1.6rem;display:block}.product-card small{color:var(--gold2)}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:15px;margin-top:40px}.gallery div{height:230px;border-radius:20px;overflow:hidden;border:1px solid var(--line)}.gallery img{width:100%;height:100%;object-fit:cover}.gallery .tall{grid-row:span 2;height:475px}
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.contact-item{padding:22px;border:1px solid var(--line);border-radius:17px;background:#101010}.contact-item span{display:block;text-transform:uppercase;letter-spacing:.12em;color:var(--gold2);font-size:.7rem;margin-bottom:5px}.contact-item b{font-size:.98rem}
+.float-wa{position:fixed;right:18px;bottom:18px;z-index:80;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#c99a2d;color:#111;font-size:1.55rem;font-weight:900;box-shadow:0 10px 35px rgba(0,0,0,.4);border:2px solid #f4d273}
+footer{padding:35px 0;border-top:1px solid var(--line);background:#050505}.footer{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-brand{display:flex;align-items:center;gap:10px}.footer-brand img{width:48px;height:48px;object-fit:contain}.muted{color:#777;font-size:.78rem}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s,transform .8s}.reveal.show{opacity:1;transform:none}
+.particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}.particle{position:absolute;width:3px;height:3px;background:#f4d273;border-radius:50%;opacity:.4;animation:float 8s linear infinite}@keyframes float{from{transform:translateY(100vh);opacity:0}20%{opacity:.45}to{transform:translateY(-15vh);opacity:0}}
+@media(max-width:900px){
+ nav{display:none}.menu{display:block}.grid2,.product,.contact{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}
+ .hero{min-height:790px;background-position:67% center}.hero-inner{padding-top:60px}.gallery{grid-template-columns:1fr 1fr}.gallery .tall{grid-row:auto;height:230px}
+}
+@media(max-width:560px){
+ .nav{height:70px}.brand img{width:46px;height:46px}.brand strong{font-size:.76rem}.brand small{font-size:.48rem}.hero{padding-top:70px;min-height:760px;background-position:72% center}.hero h1{font-size:clamp(2.8rem,12vw,4.2rem)}.hero p{font-size:1rem}.actions .btn{width:100%}
+ .section{padding:75px 0}.features,.leaders,.contact-grid,.gallery,.stats{grid-template-columns:1fr}.person-photo{height:320px}.product-art{min-height:350px}.footer{align-items:flex-start;flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a href="#beranda" class="brand"><img src="assets/logo-naga-hitam.png" alt="Logo PT Naga Hitam Selatan"><div><strong>PT NAGA HITAM SELATAN</strong><small>GOLDEN TRIANGLE COFFEE</small></div></a>
+<nav id="nav"><a href="#beranda">Beranda</a><a href="#tentang">Tentang Kami</a><a href="#direksi">Direksi</a><a href="#produk">Produk</a><a href="#galeri">Galeri</a><a href="#kontak">Kontak</a></nav>
+<button class="menu" onclick="toggleMenu()" aria-label="Menu">☰</button>
+</div></header>
+
+<main>
+<section id="beranda" class="hero">
+<div class="particles" id="particles"></div><div class="container"><div class="hero-inner reveal">
+<div class="eyebrow">PT NAGA HITAM SELATAN</div>
+<h1>Perdagangan,<br><em>Produk Premium</em><br>& Kopi Berkualitas.</h1>
+<p>Membangun bisnis melalui perdagangan dan pengembangan produk, termasuk bubuk kopi premium <b class="gold">Golden Triangle Coffee</b>.</p>
+<div class="actions"><a class="btn primary" href="https://wa.me/628131717977?text=Halo%20PT%20Naga%20Hitam%20Selatan%2C%20saya%20ingin%20informasi." target="_blank">☎ Hubungi Kami</a><a class="btn secondary" href="#tentang">Tentang Perusahaan →</a></div>
+</div></div><div class="scroll">SCROLL ↓</div>
+</section>
+
+<section id="tentang" class="section alt"><div class="container grid2">
+<div class="logo-card reveal"><img src="assets/logo-naga-hitam.png" alt="Logo resmi PT Naga Hitam Selatan"></div>
+<div class="reveal"><div class="eyebrow">Tentang Kami</div><h2>Identitas bisnis yang kuat dengan karakter Naga Hitam.</h2><p class="copy">PT NAGA HITAM SELATAN bergerak pada bidang jual beli / trading dengan salah satu produk unggulan berupa bubuk kopi premium dengan merek <b class="gold">Golden Triangle Coffee</b>.</p>
+<div class="stats"><div class="stat"><b>01</b><span>Produk unggulan kopi</span></div><div class="stat"><b>02</b><span>Perdagangan & trading</span></div><div class="stat"><b>03</b><span>Pengembangan produk</span></div><div class="stat"><b>04</b><span>Kemitraan bisnis</span></div></div></div>
+</div></section>
+
+<section id="direksi" class="section"><div class="container">
+<div class="eyebrow">Manajemen</div><h2>Direksi Perusahaan</h2><p class="copy">Profil manajemen ditampilkan menggunakan foto yang Anda berikan.</p>
+<div class="leaders">
+<div class="person reveal"><div class="person-photo"><img src="assets/ilham-mukti-aji.jpg" alt="Ilham Mukti Aji"></div><div class="person-info"><b>Ilham Mukti Aji</b><span>Direktur Utama</span><p>Memimpin arah strategis dan pengembangan bisnis PT Naga Hitam Selatan.</p></div></div>
+<div class="person reveal"><div class="person-photo"><img src="assets/silvina-adelia.jpg" alt="Silvina Adelia"></div><div class="person-info"><b>Silvina Adelia</b><span>Wakil Direktur</span><p>Mendukung koordinasi dan pengembangan kegiatan operasional perusahaan.</p></div></div>
+</div></div></section>
+
+<section id="produk" class="section light"><div class="container product">
+<div class="reveal"><div class="eyebrow" style="color:#986b16">Produk Unggulan</div><h2>Golden Triangle Coffee</h2><p class="copy">Bubuk kopi premium dengan identitas yang kuat. Area ini siap dikembangkan menjadi katalog lengkap berisi varian, ukuran kemasan, harga dan tombol pemesanan.</p><div class="actions"><a class="btn primary" href="#kontak">Tanyakan Produk →</a></div></div>
+<div class="product-art reveal"><div class="product-card"><strong>Golden Triangle</strong><small>Premium Coffee</small></div></div>
+</div></section>
+
+<section id="layanan" class="section alt"><div class="container"><div class="eyebrow">Kapabilitas</div><h2>Yang Kami Kembangkan</h2>
+<div class="features"><div class="feature reveal"><div class="icon">◈</div><h3>Perdagangan</h3><p>Aktivitas jual beli dan pengembangan jaringan bisnis.</p></div><div class="feature reveal"><div class="icon">☕</div><h3>Kopi Premium</h3><p>Golden Triangle Coffee sebagai salah satu produk unggulan.</p></div><div class="feature reveal"><div class="icon">◎</div><h3>Kemitraan</h3><p>Membangun hubungan bisnis dan peluang kerja sama.</p></div><div class="feature reveal"><div class="icon">◆</div><h3>Pengembangan Produk</h3><p>Pengembangan produk dengan perhatian pada kualitas dan identitas merek.</p></div></div>
+</div></section>
+
+<section id="galeri" class="section"><div class="container"><div class="eyebrow">Visual Brand</div><h2>Galeri</h2><div class="gallery"><div class="tall"><img src="assets/dragon-coffee-hero.jpg" alt="Naga dan kopi"></div><div><img src="assets/ilham-mukti-aji.jpg" alt="Profil direktur"></div><div><img src="assets/silvina-adelia.jpg" alt="Profil wakil direktur"></div><div><img src="assets/logo-naga-hitam.png" alt="Logo perusahaan" style="object-fit:contain;background:#080808;padding:20px"></div><div style="display:grid;place-items:center;background:linear-gradient(135deg,#151515,#080808);padding:20px;text-align:center"><b style="font-family:Georgia,serif;font-size:1.35rem;color:#f4d273">GOLDEN<br>TRIANGLE<br>COFFEE</b></div></div></div></section>
+
+<section id="kontak" class="section alt"><div class="container contact"><div><div class="eyebrow">Hubungi Kami</div><h2>Mari Bekerja Sama.</h2><p class="copy">Untuk informasi produk, perdagangan, kemitraan, dan pengembangan bisnis, silakan hubungi tim kami.</p><div class="actions"><a class="btn primary" href="https://wa.me/628131717977" target="_blank">WhatsApp Kami →</a><a class="btn secondary" href="mailto:canziolahoi@gmail.com">Email →</a></div></div>
+<div class="contact-grid"><a class="contact-item" href="https://wa.me/628131717977" target="_blank"><span>WhatsApp 1</span><b>0813 1717 977</b></a><a class="contact-item" href="https://wa.me/62895410996040" target="_blank"><span>WhatsApp 2</span><b>0895 4109 96040</b></a><a class="contact-item" href="mailto:canziolahoi@gmail.com"><span>Email</span><b>canziolahoi@gmail.com</b></a><div class="contact-item"><span>Perusahaan</span><b>PT NAGA HITAM SELATAN</b></div></div></div></section>
+</main>
+
+<a class="float-wa" href="https://wa.me/628131717977" target="_blank" aria-label="WhatsApp">☎</a>
+<footer><div class="container footer"><div class="footer-brand"><img src="assets/logo-naga-hitam.png" alt=""><div><b>PT NAGA HITAM SELATAN</b><br><span class="muted">Golden Triangle Coffee</span></div></div><span class="muted">© 2026 PT NAGA HITAM SELATAN · All Rights Reserved</span></div></footer>
+
+<script>
+function toggleMenu(){
+ const n=document.getElementById('nav');
+ const mobile=getComputedStyle(document.querySelector('.menu')).display!=='none';
+ if(!mobile)return;
+ if(n.style.display==='flex'){n.style.display='none';return}
+ n.style.display='flex';n.style.position='absolute';n.style.top='70px';n.style.left='0';n.style.right='0';
+ n.style.padding='20px';n.style.flexDirection='column';n.style.background='#080808';n.style.borderBottom='1px solid rgba(216,165,47,.3)';
+}
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>observer.observe(x));
+const p=document.getElementById('particles');
+for(let i=0;i<28;i++){let s=document.createElement('i');s.className='particle';s.style.left=(Math.random()*100)+'%';s.style.animationDelay=(Math.random()*8)+'s';s.style.animationDuration=(5+Math.random()*8)+'s';p.appendChild(s)}
+</script>
+</body>
+</html>
